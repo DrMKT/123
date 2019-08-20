@@ -13,16 +13,20 @@ public class Main2Activity extends Activity {
     int numeroHomem = 0;
     int numeroMulher = 0;
     int numeroPessoas = 0;
+    private Button botaoHomem;
+    private Button botaoMulher;
+    private Button botaoReset;
+    private TextView campoTexto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        final TextView campoTexto = (TextView) findViewById(R.id.textoPessoas);
-        final Button botaoHomem = (Button) findViewById(R.id.bHomem);
-        final Button botaoMulher = (Button) findViewById(R.id.bMulher);
-        final Button botaoReset = (Button) findViewById(R.id.bReset);
+        campoTexto = findViewById(R.id.textoPessoas);
+        botaoHomem = findViewById(R.id.bHomem);
+        botaoMulher = findViewById(R.id.bMulher);
+        botaoReset = findViewById(R.id.bReset);
 
         botaoHomem.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
